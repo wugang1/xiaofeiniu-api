@@ -30,3 +30,7 @@ app.use('/admin',adminRouter)
 app.use('/admin/dish',dishRouter)
 app.use('/admin/settings',settingsRouter)
 app.use('/admin/table',tableRouter)
+
+
+// 挂载顾客App必须的路由器
+// app.use('/dish',dishRouter)
