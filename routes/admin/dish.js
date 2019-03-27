@@ -30,7 +30,7 @@ router.get('/',(req,res)=>{
       // 循环查询每个类别下有哪些菜品
       pool.query('SELECT * FROM xfn_dish WHERE categoryId=? ORDER BY did DESC',c.cid,(err,result)=>{
         if(err) throw err;
-        c.dishLish=result
+        c.dishList=result
         finishCount++
         // 必须保证所有的类别下的菜品都查询完成才能发送响应消息——这些查询都是异步执行的
         if(finishCount==categoryList.length){
